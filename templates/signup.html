@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %} Sign Up | Edunica
+{% endblock title %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <h1>Please Sign Up here!</h1>
+    <form method="POST" class="form-group">
+    
+    {% csrf_token %}
+    {% crispy form %}
+
+    <button type="submit" class="btn btn-success">Register</button>
+</form>
+</div>
+
+<div class="container">
+    <p>You Can also try the below projects without Sign Up! Give it a Try</p>
+</div>
+<div class="container d-flex flex-sm-row flex-column justify-content-around align-items-center">
+    <div class="card mx-2" style="width: 18rem;">
+        <img src="https://source.unsplash.com/1600x800/?python" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Python Project</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card mx-2" style="width: 18rem;">
+        <img src="https://source.unsplash.com/1600x800/?Javascript" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Javascript Project</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card mx-2" style="width: 18rem;">
+        <img src="https://source.unsplash.com/1600x800/?django" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Django Project</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card mx-2" style="width: 18rem;">
+        <img src="https://source.unsplash.com/1600x800/?c++" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">C++ Project</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
